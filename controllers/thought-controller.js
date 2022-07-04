@@ -23,7 +23,7 @@ const thoughtsController = {
 
   // function to retrieve all thoughts "GET"
 
-  getAllThought(req, res) {
+  getAllThoughts(req, res) {
     Thought.find({})
       .populate({ path: "reactions", select: "-__v" })
       .select("-__v")
